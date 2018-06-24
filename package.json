@@ -9,7 +9,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
-    "test": "jest --coverage --config jest.config.js --watch",
+    "test": "jest --coverage --config jest.config.js --watch=all",
     "gh-pages": "git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {
