@@ -1,23 +1,22 @@
-.Spinner {
+.ErrorMessage {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #16151a; }
+  text-align: center; }
 
-.Spinner__image {
+.ErrorMessage__message {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  color: red; }
+
+.ErrorMessage__gif {
+  position: absolute;
+  transform: translate(-50%, -150%);
+  top: 50%;
   left: 50%; }
-.ComparatorFiler_list {
-  list-style: none;
-  padding: 0; }
-.Badges {
-  display: flex; }
-body {
-  margin: 0; }
-.Zamro {
-  padding: 0 .5rem; }
 .Product {
   display: flex;
   flex-direction: column;
@@ -38,25 +37,31 @@ body {
 
 .Product__price-label {
   color: #c5c5c5; }
-.ErrorMessage {
+.Zamro {
+  padding: 0 .5rem; }
+body {
+  margin: 0; }
+.Spinner {
   position: fixed;
   width: 100%;
   height: 100%;
-  text-align: center; }
+  background: #16151a; }
 
-.ErrorMessage__message {
+.Spinner__image {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
-  left: 50%;
-  font-size: 3rem;
-  color: red; }
-
-.ErrorMessage__gif {
-  position: absolute;
-  transform: translate(-50%, -150%);
-  top: 50%;
   left: 50%; }
+.ComparatorFiler_list {
+  list-style: none;
+  padding: 0; }
+
+.ComparatorFilter__title {
+  font-size: 1.5rem;
+  color: #4e8eda;
+  font-weight: bold; }
+.Badges {
+  display: flex; }
 body {
   margin: 0; }
 

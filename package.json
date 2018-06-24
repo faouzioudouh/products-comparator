@@ -9,6 +9,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
+    "test": "jest --coverage --config jest.config.js --watch",
     "gh-pages": "git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {
@@ -17,8 +18,11 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.11",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.1.0",
     "node-sass": "^4.9.0",
     "postcss-loader": "^2.1.5",
     "redux-thunk": "^2.3.0",
