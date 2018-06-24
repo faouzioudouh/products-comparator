@@ -11,6 +11,7 @@ const ComparatorFilter =  ({
 }) => {
     return (
       <div className="ComparatorFilter">
+      <p className="ComparatorFilter__title">Je Selectie</p>
         <ul className="ComparatorFiler_list">
             {products.map(product => {
                 const isSelected = productsToCompare.some(productsToCompare => productsToCompare.sku === product.sku);
