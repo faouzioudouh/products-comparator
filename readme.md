@@ -1,0 +1,3 @@
+- reducers ""default"
+- prefetch api domain name! www.zamro.nl, cdn.zamro.com
+- design screenshot with all the componenets names with different colors!

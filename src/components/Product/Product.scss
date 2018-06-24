@@ -1,0 +1,26 @@
+.Product {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+}
+
+.Product__image {
+    width: 100%;
+}
+
+.Product__name {
+    color: #4e8eda;
+}
+
+.Product__name,
+.Product__footer{
+    text-align: left;
+}
+
+.Product__price {
+    display: block;
+}
+
+.Product__price-label {
+    color: #c5c5c5;
+}
