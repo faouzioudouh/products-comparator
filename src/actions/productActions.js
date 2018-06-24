@@ -36,5 +36,5 @@ export const loadProducts = (...ids) => dispatch => {
         })
         // Error object is so big! and we want to keep our state object as flat as possible and also serializable!
         // Thus let's just add the error message to our state.
-        .catch(error => compose(dispatch, loadProductsFailure)(error.message))
+        .catch(error => compose(dispatch, loadProductsFailure)(error.message));
 }

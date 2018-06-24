@@ -4,6 +4,11 @@ import Types from '../../Types';
 import ComparatorFilterItem from './ComparatorFilterItem';
 import "./ComparatorFilter.scss";
 
+/**
+ * @description ComparatorFilter Component renders list of ComparatorFilterItem
+ * @param {React.Props<Object(Badge[])>} Props
+ * @returns {React.Component}
+ */
 const ComparatorFilter =  ({
     products,
     productsToCompare,

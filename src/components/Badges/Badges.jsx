@@ -4,13 +4,22 @@ import Badge from './Badge';
 
 import './Badges.scss';
 
+/**
+ * @description Badges Component 
+ * @param {React.Props<Object(Badge[])>} Props 
+ * @returns {React.Component}
+ */
 const Badges =  ({
     badges,
-}) => (
-    <React.Fragment>
+}) => {
+    if (!badges || !badges.length) {
+        return null;
+    }
+
+    return (<React.Fragment>
         {badges.map(imageUrl => <Badge key={imageUrl} imageUrl={imageUrl} />)}
-    </React.Fragment>
-);
+    </React.Fragment>);
+};
 
 Badges.propTypes = {
     badges: Types.arrayOf(Types.string.isRequired),

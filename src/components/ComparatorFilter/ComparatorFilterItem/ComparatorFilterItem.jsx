@@ -4,6 +4,11 @@ import Types from '../../../Types';
 
 import "./ComparatorFilterItem.scss";
 
+/**
+ * @description ComparatorFilterItem renders the filet item (checbox and label)!
+ * @param {React.Props<Object>} Props 
+ * @returns {React.Component}
+ */
 const ComparatorFilterItem =  ({
     sku,
     name,

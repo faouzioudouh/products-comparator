@@ -4,6 +4,11 @@ import Types from '../../../Types';
 import { isAllItemsAreEqual } from '../../../helpers';
 import './ComparatorLine.scss';
 
+/**
+ * @description ComparatorLine component renders the features and the values
+ * @param {React.Props<Object>} props
+ * @returns {React.Component} props
+ */
 const ComparatorLine =  ({
     propertyName,
     features,
@@ -19,7 +24,7 @@ const ComparatorLine =  ({
                 <div className="ComparatorLine__content">
                     {features.map(({ key, value }) =>
                         <div className="ComparatorLine__cell" key={key}>
-                            {typeof renderValue === 'function' ? renderValue(value) : value}
+                            {typeof renderValue === 'function' ? renderValue(propertyName, value) : value}
                         </div>
                     )}
             </div>

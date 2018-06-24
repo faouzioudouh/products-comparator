@@ -1,4 +1,5 @@
 import axios from 'axios';
+import config from '../config';
 
 class ZamroApi {
     constructor(config) {
@@ -15,4 +16,4 @@ class ZamroApi {
     }
 }
 
-export default new ZamroApi(window.__API_CONFIG__);
+export default new ZamroApi(config.__API_CONFIG__);

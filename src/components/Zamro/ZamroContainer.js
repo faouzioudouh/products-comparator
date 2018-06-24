@@ -8,10 +8,15 @@ import { getProductsBySky } from '../../selectros/products';
 import Zamro from './Zamro';
 import Spinner from '../Spinner';
 import ErrorMessage from '../ErrorMessage';
+import Badges from '../Badges';
+import { sortFeaturesAlphabetically, moveItemToFront } from '../../helpers';
 
+const FEATURE_BADGES = 'badges';
 class ZamroContainer extends React.Component {
   constructor(props) {
     super(props);
+
+    this.getFormattedProps = this.getFormattedProps.bind(this);
 
     this.state = {
         products: [],
@@ -23,19 +28,43 @@ class ZamroContainer extends React.Component {
     this.props.loadProducts(...this.props.productsIds);
   }
 
+  getFormattedProps() {
+    const { products, featuresToCompare, productsToCompare } = this.props;
+
+    // Sort features Alphabetically and move `Badges` to the front.
+    const sortedFeatures = sortFeaturesAlphabetically(featuresToCompare);
+    const sortedFeaturesWithBadgesAtTheFront = moveItemToFront(sortedFeatures)(FEATURE_BADGES);
+
+    return {
+      products,
+      productsToCompare,
+      featuresToCompare: sortedFeaturesWithBadgesAtTheFront,
+    }
+  }
+
+  /**
+   * @description Since the comparator value are not always string we need a value converter! 
+   * @param {string} feature feature name
+   * @param {string} value feature value
+   * @returns {React.Component | String}
+   */
+  renderCompareValue(feature, value) {
+    if (feature === FEATURE_BADGES) {
+      return <Badges badges={value.split('|')} />;
+    }
+
+    return value;
+  }
+
   render() {
-    const { products, isProductsLoading, featuresToCompare, productsToCompare, error } = this.props;
+    const { isProductsLoading, error } = this.props;
 
     if (isProductsLoading) {
       return <Spinner />
     } else if(error) {
       return <ErrorMessage message={error} />
     } else {
-      return (<Zamro
-        products={products}
-        productsToCompare={productsToCompare}
-        featuresToCompare={featuresToCompare}
-    />);
+      return (<Zamro {...this.getFormattedProps()} renderCompareValue={this.renderCompareValue} />);
     }
   }
 }

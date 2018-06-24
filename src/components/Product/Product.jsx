@@ -3,6 +3,11 @@ import Types from '../../Types';
 
 import "./Product.scss";
 
+/**
+ * @description Product renders the product card (image, title, price)!
+ * @param {React.Props<Object>} Props 
+ * @returns {React.Component}
+ */
 const Product =  ({
   name,
   productImage,
