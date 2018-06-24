@@ -1,0 +1,134 @@
+.Spinner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #16151a; }
+
+.Spinner__image {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%; }
+.ComparatorFiler_list {
+  list-style: none;
+  padding: 0; }
+.Badges {
+  display: flex; }
+body {
+  margin: 0; }
+.Zamro {
+  padding: 0 .5rem; }
+.Product {
+  display: flex;
+  flex-direction: column;
+  padding: .5rem; }
+
+.Product__image {
+  width: 100%; }
+
+.Product__name {
+  color: #4e8eda; }
+
+.Product__name,
+.Product__footer {
+  text-align: left; }
+
+.Product__price {
+  display: block; }
+
+.Product__price-label {
+  color: #c5c5c5; }
+.ErrorMessage {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center; }
+
+.ErrorMessage__message {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  color: red; }
+
+.ErrorMessage__gif {
+  position: absolute;
+  transform: translate(-50%, -150%);
+  top: 50%;
+  left: 50%; }
+body {
+  margin: 0; }
+
+.Comparator__products {
+  display: flex; }
+
+.Comparator__lines {
+  display: flex;
+  flex-direction: column; }
+
+@media screen and (min-width: 996px) {
+  .Comparator__header {
+    display: flex; }
+  .Comparator__products {
+    width: 70%; }
+  .ComparatorFilter__container {
+    width: 30%; } }
+.ComparatorFilterItem {
+  display: flex;
+  text-align: left;
+  margin-bottom: 1rem; }
+
+.ComparatorFilterItem__checkbox {
+  margin-right: .5rem; }
+
+.ComparatorFilterItem__checkbox-label {
+  color: #4e8eda; }
+.Badge {
+  margin-right: 5%;
+  margin-bottom: .3rem;
+  width: 2.5rem;
+  height: 2.5rem; }
+
+.Badge__image {
+  width: 100%; }
+body {
+  margin: 0; }
+
+.ComparatorLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem 1rem 0;
+  border: 1px solid #ddd;
+  margin-bottom: .5rem; }
+
+.ComparatorLine__content {
+  display: flex;
+  justify-content: space-around;
+  width: 100%; }
+
+.ComparatorLine--highlight {
+  background-color: #e2e2e2; }
+
+@media screen and (max-width: 995px) {
+  .ComparatorLine__feature-cell {
+    background-color: #8e8e8e;
+    align-self: start;
+    padding: .5rem;
+    margin-bottom: .5rem;
+    color: white; } }
+
+@media screen and (min-width: 996px) {
+  .ComparatorLine {
+    flex-direction: row;
+    padding: 1rem;
+    margin-bottom: 0; }
+  .ComparatorLine__cell {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1; }
+  .ComparatorLine__feature-cell {
+    width: 30%; }
+  .ComparatorLine__content {
+    width: 70%; } }
